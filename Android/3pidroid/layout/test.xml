@@ -31,11 +31,11 @@
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/button_right"
         android:onClick="decelerar"
         android:text="@string/button_down" />
-
+    
     <Button
         android:id="@+id/button_left"
         android:layout_width="wrap_content"
@@ -72,7 +72,7 @@
         android:layout_centerVertical="true"
         android:onClick="girarders"
         android:text="@string/button_softr" />
-
+    
     <CheckBox
         android:id="@+id/checkBox1"
         android:layout_width="wrap_content"
@@ -80,31 +80,23 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:text="Telemetría" />
-
-    <TextView
-        android:id="@+id/textView170g"
+    
+    <Button
+        android:id="@+id/freno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button1"
-        android:layout_toLeftOf="@+id/textView135g"
-        android:text="170º, Cm: "
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
-    <TextView
-        android:id="@+id/textView10g"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/checkBox1"
-        android:layout_toLeftOf="@+id/button_right"
-        android:text="10º, Cm: "
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
+        android:layout_alignBaseline="@+id/button1"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_alignParentLeft="true"
+        android:onClick="parartotal"
+        android:text="Parar" />
+    
     <TextView
         android:id="@+id/textView90g"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button1"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
         android:text="90º, Cm: "
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -112,10 +104,19 @@
         android:id="@+id/textView135g"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button_left"
-        android:layout_marginRight="24dp"
-        android:layout_toLeftOf="@+id/button1"
+        android:layout_alignBottom="@+id/freno"
+        android:layout_toLeftOf="@+id/textView90g"
         android:text="135º, Cm: "
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textView10g"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/checkBox1"
+        android:layout_marginLeft="19dp"
+        android:layout_toRightOf="@+id/button3"
+        android:text="10º, Cm: "
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
@@ -124,17 +125,19 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textView135g"
         android:layout_alignBottom="@+id/textView135g"
-        android:layout_toLeftOf="@+id/textView10g"
+        android:layout_toRightOf="@+id/textView90g"
         android:text="45º, Cm: "
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
-    <Button
-        android:id="@+id/freno"
+    <TextView
+        android:id="@+id/textView170g"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView170g"
-        android:layout_toLeftOf="@+id/button1"
-        android:onClick="parartotal"
-        android:text="Parar" />
-
+        android:layout_alignBaseline="@+id/textView10g"
+        android:layout_alignBottom="@+id/textView10g"
+        android:layout_marginRight="24dp"
+        android:layout_toLeftOf="@+id/button3"
+        android:text="170º, Cm: "
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    
 </RelativeLayout>
